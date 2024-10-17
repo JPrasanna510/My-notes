@@ -1,0 +1,218 @@
+Programming language means which haslogic.
+
+Primitive means which can go to potential upside also we cant broken down into various types.
+
+primitive datatypes:7
+Non-primitive datatypes: 1
+total datatypes: 8
+Primitive data types:
+Number:
+String:  char, string(there is not char in javascript)
+Boolean:
+undefined:
+null:
+(new)symbol:
+(new)Big INT:
+
+non-primitive:Object
+
+variable: just a container or a memory which holds some values inside it and its recognized by a name.
+
+There is no type restriction for variables in JS.
+have a container and change it to any type of value.
+ 
+In order to create a variable we need declaratives:
+let:
+var:
+const:
+
+As of now learn only let:
+let input=10;
+
+Rules of variables:
+-->a-z, A-Z, 0-9
+-->Cannot start with number
+-->can start special characters _,$(can be variable names alone)
+--> cant use reserved keywords(for, while, let, continue, break)
+
+Browsers will have engines like SEO, and many more.
+for development we have 2 engines, layout and Js.
+
+Layout engine reads HTML+CSS and understands and work according to it. It loads 1st and then the JS engine starts within micro seconds.
+
+JS engine inside the chrome is v8 engine.(it is also a fastest car's engine)
+
+
+What is a console: it is a REPL.
+Reads, evaluates, prints, loop
+
+Error lines--- squidgy line
+SOC(Separation of concern)--separate the code scripts for each purpose.
+
+We can link the script file at the end of html.
+<script src="ab.js"></script>
+
+null valued variable is an object;
+let a=10/ type is number;
+let b=true;/ type is Boolean
+let c="prasu" //type is object.
+
+NaN type is also a number.
+
+==  - general equality; do not check the type.
+=== - strict equality; check the type before .
+
+instead of using && operator in else if, we can come in reverse order for condition.
+
+let marks=30;
+if (marks>=40 && attendance>=75){
+console.log("pass")
+}
+else{
+console.log("fail");
+}//((here the output will be fail, even we didn't give attendance. as it checks marks and comes to final conclusion))
+This is called short circuiting..
+
+Function is a block or piece of code, which can be reused.. nature is return something.
+
+function prasu(){
+}
+prasu();//calling the function
+
+
+
+let a=10;
+let fn=function(){
+console.log("I am fun")}// This function is called first class citizen.
+and the function called first class function
+
+undefined--- JS engine take care of undef
+null-- developer has to take care
+
+let a=undefined; //is not recommended. undefined can be any type of the data which we cant expect.
+
+null - is an object type.
+
+Array-- is a data structure which consists of non-similar type of data and ordered(heterogenous data)
+homogenous array  (similar data)
+
+[10, 20, 30, 40, 50]
+2d array--[10, 20, ["prasu","ricky",true], 40, 50]
+3d array--[10, 20,["prasu", [1000, 2000,3000],true],40,50]
+
+object: collection of properties, key:value pairs.
+objects are un ordered.
+
+let obj= {....};
+let person= { namee: "prasu", age:35, favcolor:""}; there are 3 properties
+we cannot use name, its already stored.
+We can access the keys as strings only. bcoz they stored as a string
+console.log(person["namee"]);
+console.log(person["age"]);
+
+another way to access properties:
+person.age
+person.namee
+
+calling an object inside itself is not best practice
+to achieve this we use "this" keyword.
+
+Loops::
+for, for in, for of, do while, while
+
+foreach is not a loop, its a method.
+
+for(let i=0; i<=10; i++)
+
+min no.of times the do while loop runs, 1:
+for and while loop, 0 times
+if we have a condition, we use while.
+if we have no. then we use for loop.
+ 100001-999999   random*8999998
+
+
+var--- redeclaration, reassign  both are yes
+let--- redeclaration  no, reassign yes
+const--- both are no
+
+Whenever any JS code runs a global execution context(GEC) is created.
+Inside that GEC, we have 2 phases.
+1. Memory creation phase
+2. Code execution phase.
+
+The role of MCP is to allocate memory to all the variables and functions
+
+After the MCP is done, we start with CEP and in this each line of code runs one after the other.
+All the JS code which we run is running becoz of call stack behind the scenes and GEC or other execution contexts they are also running inside call stack.
+
+shortest JS code is an empty js file which is linked.
+
+**  Undefined will be given by JS, Null will be given by developer
+
+Until unless we call it CEP will not enter into a function.[only the memory allocated by MCP]
+
+Whenever a function called a new execution context is created(it's name will be as function name) and inside that execution context 2 new phases are there: MCP, CEP and the journey continues..
+
+**Hoisting-- The concept of accessing a variable or a function even before it's declaration is called hoisting.
+
+General hoisting: var only--> undefined as an answer
+Dead temporal zone: let, const--> error as an answer but special answer.
+
+JS is synchronous(one after the other), weekly coupled(ex: datatype of the variable can be changed number to string to boolean or any type), dynamically(datatype is decided on run time), single threaded(one task at a time), interpreted(code will run line by line, if error encounters, will not run ahead code)
+
+
+Whenever there is abreakpoint, that line will not run
+When 0 lines are executed, We will be inside MCP
+
+*Whenever a GEC is created along with that a global object is also created. 
+
+Scopes:4
+1. global  ----
+2. script
+3. functional ---
+4. block ( functional an blocktogether called local)
+
+how to decide the scope:
+if your variable is inside a block ({})
+   no-->1. variable is var: global scope
+        2. variable is let& const: script scope
+
+  Yes---> is that block({}) made from function?(not if, for)
+    no-->1. variable is var: global scope
+         2. variable is let& const: block
+
+   Yes---> 1. var: functional
+           2. let & const: block
+
+
+var a=10;  //global
+let b=100; //script
+const c-200;// script
+
+if(true){
+var d=20; //global
+let e=300; // block
+const f=400; //block
+}
+
+function prasu(){
+var g=30;  //functional
+let h=400; //block
+const i=600;//block
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

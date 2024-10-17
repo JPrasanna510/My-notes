@@ -1,0 +1,73 @@
+<!--cascading style sheet
+used to makeup the html doc.
+used to style and layout webpage.
+Types of CSS:
+Inline
+Internal
+External
+Which overrides?
+inline>internal>external
+
+to change font color and style
+<h1 style="color: red; font-family: cursive;">This is my heading.</h1>
+this is also called inline CSS
+
+Internal CSS: If you write the styles on the same page but not inside a tag, but inside the head tag, we call it as internal CSS
+<head>
+<style>
+h1{
+color: red;
+font-family: cursive;
+}
+</style>
+</head>
+
+external CSS: we can make separate file. 
+h1{
+color: red;
+font-family: cursive;
+}
+
+we have to link this .css fine to html file
+<link rel="stylesheet" href="file.css">
+
+CSS selectors:
+universal selector: we use *{ property: value}
+body selector: 
+we use id, class, nested class here.
+If we want to give different colors for each h1 tag. then we use id
+<h1 id="heading1"></h1>
+<h1 id="heading2"></h1>
+We have to use #
+#heading1{P:v}
+#heading2{P:v}
+<h1 class="heading1"></h1>
+If we want to use the same styling to different components then we use class.
+To use this we use "."
+.heading1{p:v}
+.heading2{p:v}
+
+We can give padding in a single line 
+padding: top right down left,
+
+padding: 10 20 30 40;
+
+padding: 40 50; (take top and bottom as 40, left and right as 50)
+margin is also same like padding
+
+Margin collapsing:  The margin space between next to next boxes will be taken as the highest amount
+if box1
+
+Even though the sizes of two boxes same, based on the padding the size may vary.
+box sizing:  border-box; // it reduces the content height will be reduced as per padding and border.
+box sizing encorporates the size of the content inside the element. by default all projects use this
+*{
+    bbox sizing:  border-box;
+    margin:0; // it removes default margin size of 8px in the body.
+    
+}
+margin-collapse: the merging of adjacent element margins.
+
+
+in Inline elements, we cant give custom height and width, Margin also we can give only horizontally.
+we can use display property to change the behaviour.
