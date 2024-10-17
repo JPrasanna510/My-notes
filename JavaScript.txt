@@ -170,7 +170,7 @@ Scopes:4
 1. global  ----
 2. script
 3. functional ---
-4. block ( functional an blocktogether called local)
+4. block ( functional an block together called local)
 
 how to decide the scope:
 if your variable is inside a block ({})
@@ -200,6 +200,18 @@ var g=30;  //functional
 let h=400; //block
 const i=600;//block
 }
+
+
+Error(not defined, means not at all declared) is different, undefined is different.
+
+
+Higher ordered function::
+
+Accepting an error is bigger.
+when a function(a) is passed an argument to another function(b) then the fn which accepts the fn(a) 
+
+
+lexical scope= local scope + parent's lexical scope
 
 
 

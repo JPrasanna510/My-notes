@@ -1,0 +1,15 @@
+Flex- grow: even though there is a width, then also it takes entire width of the screen
+by default value is 1; we can also make it 0 so that takes exact width
+
+flex-shrink: we can shrink the elements .
+
+flex-basis: here also it takes the entire width
+
+article: nth-of-type(2){
+flex-grow: 2;}
+/*It makes the second article grows double than other elements.*/
+
+
+flex-basis:200px; even though there is a width for element, it takes only 200px;
+after this if you have flex-grow then again it takes entire screen.
+

@@ -1,0 +1,54 @@
+Git hub-- repository(
+Git-- version control system (local system)
+
+After installation: check the vesrion..
+we have to configure:  
+git config global user.name "prasanna510"
+git config --global user.name(check the user)
+git config --global user.email "prasannadevi.jana@gmail.com"  (set the e mail)
+
+
+Staging are(promised)---> commit(promise fulfilled)---> Push to remote repository
+Above are the three steps to push out code from local machine to remote repository.
+
+git add filename
+git commit -m "Meaningful message"
+sign in into accounts in VScode. we need GITHUB pull requests extension to push the code.
+
+git push origin main(or branch)
+
+git log----> gives you all the commits and along with id's.
+
+M--modified
+
+U--Untracked file.[once added then changes to A, means added]
+
+If you have a folder and wanted to keep it in repo, then use init.
+git add .  ---> makes all the files in the folder added.
+
+git remote -v  [we can check whether the same repo is available or not which is alrdy there in local machine.]
+
+git push -u origin main   --> After this we can use direct push and no need to mention -u origin main as it remembers with the above command.
+
+
+
+
+
+
+repo---remote folder
+
+git lens extension
+git branch (we have to go to the main branch)
+git init
+git add .
+git checkout -b main(if it is not happened here, we have to manually by copying the url from GitHub)
+
+git remore add origin link 
+git remote -v
+commint -m
+git push origin main
+git pull origin main
+
+
+
+
