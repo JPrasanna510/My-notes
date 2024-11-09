@@ -1,4 +1,4 @@
-Programming language means which haslogic.
+Programming language means which has logic.
 
 Primitive means which can go to potential upside also we cant broken down into various types.
 
@@ -40,6 +40,8 @@ for development we have 2 engines, layout and Js.
 
 Layout engine reads HTML+CSS and understands and work according to it. It loads 1st and then the JS engine starts within micro seconds.
 
+
+
 JS engine inside the chrome is v8 engine.(it is also a fastest car's engine)
 
 
@@ -59,8 +61,27 @@ let c="prasu" //type is object.
 
 NaN type is also a number.
 
+
+Switch statement we use when we have multiple conditions.
+We should always ad break to avoid the execution of the other statements in the switch cases.
+
+else statement is used for executing a block of code when the condition is false
+
 ==  - general equality; do not check the type.
 === - strict equality; check the type before .
+
+Operators in JS:
+1. Arithmatic operators: +,-,*,%,/,**(power of)(exponentiation)
+num++ is post increment.
+console.log(num++); //here it prints num and then it increases +1.
+** In Js,null==undefined is true. 
+** In JS, NaN === NaN is False. Nan is not considered to be equal to NaN even after using the strict equality operator.
+
+
+2: Comparison Operators:
+3. Logical Operators:
+4. Conditional Operators:
+5. Assignment Operator: =
 
 instead of using && operator in else if, we can come in reverse order for condition.
 
@@ -223,8 +244,332 @@ lexical scope= local scope + parent's lexical scope
 
 
 
+***Continue statement skips the rest of the current iteration..
+
+
+constructor, classes, prototype::::
+
+function sum(num1, num2)//num1 2 are parameters.
+sum(2,3); //2,3 are arguments.
+
+
+function Prasu(name, clor){
+thisname=name;
+this.color=color;
+}
+let s1= new Prasu("Ram",""Green" );
+let s2= new Prasu("Ram",""Green" );
+console.log(s1);
+console.log(s2);
+
+preferred capital letter for the constructor name;;
+call it with new keyword.
+using prototype we can save the memory, we can save the function as an array
+Prasu.prototype. speak{
+retun 'hello from $this.name'}
+
+
+class will automatically stores the functions in prototype even though we dont mention..
+thats why we call it as sugar coated
 
 
 
+DRY- dont repeat yourself
+wet= write everything twice.
+Javascript is not oops, but it follows indirectly
+
+we can make a class dry by extending the class from another class
+so that all the previous properties will be available into the second class
+order should not change in constructor. because they are strings.
+
+something like method overloading overriding but we dont use the names here, as js is not oops.
+if it is hard coded object, then object.prototype
+
+if it is from a constructor, then classname.prototype
+
+
+
+this keyword types:  5
+
+direct calling: everytime one GEC created and the object will be window. when we call this in any outside function, then this points to window object
+
+function Samarth(){
+console.log(this);
+{
+Samarth();//direct calling
+
+
+method calling:
+let obe={ a=10; fun: function(){
+console.log(this)}
+obj.fn();
+
+here the this is called only when function called which is of the object only, so method calling....
+
+let obj={
+a:100;
+fn: function(){
+console.log(this, "1");
+let sam=function(){
+console.log(this, "2");
+}
+sam();//direct calling.. points window..
+}}obj.fn();//method calling
+
+
+let obj={ a:200;
+fn: function(){ console.log(this,"1");//window, bcoz direct calling
+abc();
+console.log(this,"2");
+}
+}
+let ans=obj.fn;//not function calling, just adding to the key..
+ans();// direct calling
+
+
+
+constructor calling: newly created object..
+
+function Prasu(){
+this.naam="prasu";
+this.age=22;
+}
+let s1= new Sam();
+let s2= new Sam();//newly created objects called.
+
+
+indirect calling: call, apply, bind.
+allt hese 3 are used to change the reference of this keyword.
+ let obj={
+a:10;
+fn:function(){
+console.log(this.a);//obj.a=10 
+}}
+let obj2={
+a:50;
+}
+obj1.fn();//method calling
+obj2.fn();//error
+
+obj1.fn.call(obj2);//new ref 
+obj1.fn.apply(obj2);//new ref 
+but when we have arguments in the function(x,y,z)
+obj1.fn.call(obj2,1,2,3);//new ref 
+obj1.fn.apply(obj2,[1,2,3]);//new ref
+
+bind:
+bind also change the ref of this and it created the copy of that function.
+
+  let obj={
+a:10;
+fn:function(){
+console.log(this.a);//obj.a=10 
+}}
+let obj2={
+a:50;
+}
+
+let newRef= obj1.fn.bind(obj2);
+
+//let newRef= obj1.fn.bind(obj2,1,2,3);
+console.log(newRef);
+
+newRef();
+
+
+
+arrow function calling:: arrow function is syntactical sugar of general function.
+
+function square(n){//general function.
+return n*n;
+
+}
+console.log(square(5));
+
+//arrow function writing from above.// 1..dont write function keyword, use the declarative
+add = after the function name, add arrow after ().
+
+
+(function) let square=(n)=>{//general function.
+return n*n;
+
+}
+console.log(square(5));
+
+
+//way-2 for arrow function. when we have single line we can remove {} and remove return..
+
+let square =(n) => n*n;
+console.log(square(5));
+
+//way3- if we have just one argument, we can remove () as well for parameters..
+
+let square = n => n*n;
+console.log(square(5));
+
+//arrow functions calling:: this keyword depends upon the parent this. and 
+
+let obj={
+a:10;
+fn: function(){
+console.log(this);
+
+Asyc programming:
+
+Java script is always synchronous programming.
+
+
+
+
+
+Homework::
+
+1.Instagram with async await
+2.setTimeout(function(){
+console.log("run after 4 seconds")}, 4000}
+
+
+setTimeout(function(){
+console.log("run after 2 seconds")}, 2000}
+console.log("end");
+
+
+3. console.log(
+
+
+
+
+
+
+When we send request, we get a response as a page, which contains html, css, js. Here reloading takes place. 
+traditional request.. here, the
+in AJAX request, there will be a layer b/w browser and server. That is called layer of JS. In this, JS layer sends the JS only which is called data part. it wont send html, css. Here reloading will not happen. As there is no reloading, the action i faster.
+
+How to send AJAX req?
+fetch(production)
+axios(production)
+XMLHttpRequest (old)	
+jQuery(not using at all)
+
+API, is an end point, where we send the request and we get the response. and the response is data only.
+
+TV remote example for API. API gives ease to use.
+
+fetch--> is not part of JS --> web API --> returns a promise --> gives partial data --> wait (JSON)--> JSON also gives promise --> gives us entire data
+
+
+fetch("endpoint")
+.then((data)=>{
+return data.json();//partial data
+
+}).then((resp)=>{
+console.log(resp,"resp);})
+
+.catch((err)=>{
+console.log(err, "err")})
+//fetch using .then .catch
+
+//fetch using async await
+async function callApi(){
+let data= await axios.get("api end point");
+let resp= await data.json();
+console.log(resp);
+}
+callApi()
+
+
+
+data travels in the form of packets.
+
+Axios is a 3rd party code. we will use it with the help of CDN(content delivery network). it also returns a promise. but it gives us entire data at once.
+//axios with promise.
+axios.get("end point)
+.then(function(resp){
+console.log(resp.data);})
+.catch(function(err){})
+
+//axios with async await
+async function callApi(){
+let resp= await axios.get("api end point");
+console.log(resp.data);
+}
+callApi()
+
+DOM: Document object model
+
+changing HTML by using JS without entering to HTML, just by JS.
+<HTML>
+<h1>newc</h1>
+<h1 id="sam">cnldj</h1>
+<div id=></div>
+<div></div>
+<h3 class="prasu">ncei</h3>
+<h3 class="prasu">dei</h3>
+
+
+selection(to whom manipulate):
+ways of selection are many. most famous are 5:
+getElementsByTagName()::
+let allH1 = document.getElementsByTagName('h1');
+console.log(allH1);
+we get an array but we cant use any array functions.
+console.log(allH1[0].style.color="red");
+console.log(allH1[0].style.backgroundColor="yellow");
+//added CSS
+
+getELementById()
+let IdEl = document.getElementById('sam');
+console.log(IdEl.style.fontsize="100px");
+console.log(IdEl.style.color="blue");
+console.log(IdEl.style.backgroundColor="gray");
+
+
+
+getElementsByClassName()
+
+let classEl = document.getElementsClassname('prasu');
+console.log(classEl[0].style.color="red");
+//for single class
+for all the objects
+for (let item if classEl){
+item.style.color="red"
+item.style.backgroundcolor="green"
+
+}
+
+for(let item of classEl){
+item.style.csstext=
+
+
+
+querySelector()
+querySelectorAll()
+
+
+manipulation/changing:
+
+
+
+
+
+
+DOM:
+
+in WET we see camelCase variables.
+in DRY we see kabab case.{- in the variable called kabab case}
+toggle accepts one class at a time.
+
+DOM Traversal:
+going one level down or up, going left or right.
+
+Events:
+
+ function bg_Color(color) {
+document.body.style.backgroundColor = color
+}
+
+<button onclick="bg_Color('red')">red</button>
+    <button onclick="bg_Color('green')">green</button>
+    <button onclick="bg_Color('blue')">blue</button>
 
 
